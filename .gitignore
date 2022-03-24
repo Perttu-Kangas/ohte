@@ -26,3 +26,6 @@ build/
 # Maven
 log/
 target/
+
+# PyTest
+.pytest_cache
