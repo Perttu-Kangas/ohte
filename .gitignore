@@ -29,3 +29,7 @@ target/
 
 # PyTest
 .pytest_cache
+
+# Coverage
+.coverage
+htmlcov
