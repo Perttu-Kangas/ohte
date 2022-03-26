@@ -33,3 +33,6 @@ target/
 # Coverage
 .coverage
 htmlcov
+
+# Mostly commands
+private.txt
