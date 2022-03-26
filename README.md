@@ -1,6 +1,6 @@
 # Ohte
 
-## Harjoitustyö
+## Harjoitustyö - matopeli
 
 [vaatimusmaarittely.md](harjoitustyo/dokumentaatio/vaatimusmaarittely.md)  
 [tuntikirjanpito.md](harjoitustyo/dokumentaatio/tuntikirjanpito.md)
