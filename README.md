@@ -14,4 +14,9 @@
 #### Viikko 2
 [maksukortti/](laskarit/viikko2/maksukortti)  
 [unicafe/](laskarit/viikko2/unicafe)  
-![Testikattavuus.png](laskarit/viikko2/Testikattavuus.png)  
+[Testikattavuus.png](laskarit/viikko2/Testikattavuus.png)
+
+#### Viikko 3
+[monopoly.md](laskarit/viikko3/monopoly.md)  
+[machine.md](laskarit/viikko3/machine.md)  
+[hsl.md](laskarit/viikko3/hsl.md)
