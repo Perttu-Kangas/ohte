@@ -1,22 +1,27 @@
-# Ohte
+# Matopeli
+Sovelluksella pystyy pelaamaan [matopeliä](https://fi.wikipedia.org/wiki/Matopeli).
+Sovellusta voi käyttää vain yksi pelaaja kerrallaan.
 
-## Harjoitustyö - matopeli
+## Dokumentaatio
 
-[vaatimusmaarittely.md](harjoitustyo/dokumentaatio/vaatimusmaarittely.md)  
-[tuntikirjanpito.md](harjoitustyo/dokumentaatio/tuntikirjanpito.md)
+- [Vaatimusmäärittely](harjoitustyo/dokumentaatio/vaatimusmaarittely.md)  
+- [Tuntikirjanpito](harjoitustyo/dokumentaatio/tuntikirjanpito.md)
+- [Changelog](harjoitustyo/dokumentaatio/changelog.md)
 
-## Laskarit
+## Asennus
 
-#### Viikko 1
-[gitlog.txt](laskarit/viikko1/gitlog.txt)  
-[komentorivi.txt](laskarit/viikko1/komentorivi.txt)
+1. Kloonaa repo
+2. Siirry terminaalissa kansioon ``harjoitustyo/``
+3. Asenna riippuvuudet ``poetry install``
+4. Käynnistä sovellus ``poetry run invoke start``
 
-#### Viikko 2
-[maksukortti/](laskarit/viikko2/maksukortti)  
-[unicafe/](laskarit/viikko2/unicafe)  
-[Testikattavuus.png](laskarit/viikko2/Testikattavuus.png)
+## Komentorivitoiminnot
 
-#### Viikko 3
-[monopoly.md](laskarit/viikko3/monopoly.md)  
-[machine.md](laskarit/viikko3/machine.md)  
-[hsl.md](laskarit/viikko3/hsl.md)
+### Ohjelman suorittaminen
+Komento: ``poetry run invoke start``
+
+### Testaus
+Komento: ``poetry run invoke test``
+
+### Testikattavuus
+Komento: ``poetry run invoke coverage-report``
