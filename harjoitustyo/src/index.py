@@ -1,4 +1,8 @@
-from services.snake_game import SnakeGame
+from tkinter import Tk
+from ui.ui import UI
 
-snake_game = SnakeGame()
-snake_game.start()
+window = Tk()
+window.title("Snake Game")
+ui = UI(window)
+ui.start()
+window.mainloop()

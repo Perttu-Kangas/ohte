@@ -7,19 +7,21 @@ from entities.player import Player
 
 class SnakeGame:
 
-    def __init__(self, player: Player):
+    def __init__(self, player: Player, show_main_view):
         self.snake_game_loop = None
         self.game_x = 300
         self.game_y = 300
         self.player = player
         self.snake = Snake(self, 150, 150)
         self.apple = Apple(self)
+        self.show_main_view = show_main_view
 
     def start(self):
         self.snake_game_loop = SnakeGameLoop(self, self.player)
         while True:
             if self.snake_game_loop.tick():
                 pygame.quit()
+                self.show_main_view()
                 break
 
 
