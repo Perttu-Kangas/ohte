@@ -57,7 +57,7 @@ class SnakeGameLoop:
                              pygame.Rect(body_part[0], body_part[1], 10, 10))
         pygame.draw.rect(self.display,
                          self.player.apple_color.value,
-                         pygame.Rect(self.game.apple.x, self.game.apple.y, 10, 10))
+                         pygame.Rect(self.game.apple.apple_x, self.game.apple.apple_y, 10, 10))
 
     def handle_events(self):
         for event in pygame.event.get():
