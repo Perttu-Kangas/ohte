@@ -7,6 +7,7 @@ Sovellusta voi käyttää vain yksi pelaaja kerrallaan.
 - [Vaatimusmäärittely](harjoitustyo/dokumentaatio/vaatimusmaarittely.md)  
 - [Tuntikirjanpito](harjoitustyo/dokumentaatio/tuntikirjanpito.md)
 - [Changelog](harjoitustyo/dokumentaatio/changelog.md)
+- [Arkkitehtuuri](harjoitustyo/dokumentaatio/arkkitehtuuri.md)
 
 ## Asennus
 
