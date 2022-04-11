@@ -25,3 +25,6 @@ Komento: ``poetry run invoke test``
 
 ### Testikattavuus
 Komento: ``poetry run invoke coverage-report``
+
+### Pylint
+Komento: ``poetry run invoke lint``
