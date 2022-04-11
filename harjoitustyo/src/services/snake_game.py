@@ -1,8 +1,9 @@
 import pygame
-from enums.game_enums import Direction
-from entities.snake import Snake
+
 from entities.apple import Apple
 from entities.player import Player
+from entities.snake import Snake
+from enums.game_enums import Direction
 
 
 class SnakeGame:
@@ -46,12 +47,17 @@ class SnakeGameLoop:
         self.draw()
         pygame.display.update()
         self.clock.tick(self.player.difficulty.value)
+        return False
 
     def draw(self):
         self.display.fill(self.player.background_color.value)
         for body_part in self.game.snake.body:
-            pygame.draw.rect(self.display, self.player.snake_color.value, pygame.Rect(body_part[0], body_part[1], 10, 10))
-        pygame.draw.rect(self.display, self.player.apple_color.value, pygame.Rect(self.game.apple.x, self.game.apple.y, 10, 10))
+            pygame.draw.rect(self.display,
+                             self.player.snake_color.value,
+                             pygame.Rect(body_part[0], body_part[1], 10, 10))
+        pygame.draw.rect(self.display,
+                         self.player.apple_color.value,
+                         pygame.Rect(self.game.apple.x, self.game.apple.y, 10, 10))
 
     def handle_events(self):
         for event in pygame.event.get():
@@ -67,7 +73,7 @@ class SnakeGameLoop:
                 else:
                     self.game.snake.move(None)
                 return True
-            elif event.type == pygame.QUIT:
+            if event.type == pygame.QUIT:
                 return False
         self.game.snake.move(None)
         return True

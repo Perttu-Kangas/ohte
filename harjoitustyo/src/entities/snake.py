@@ -3,12 +3,12 @@ from enums.game_enums import Direction
 
 class Snake:
 
-    def __init__(self, snake_game, x, y):
+    def __init__(self, snake_game, x, y):  # pylint: disable=invalid-name
         self.snake_game = snake_game
         self.direction = Direction.RIGHT
         self.body = [[x, y]]
-        self.x = x
-        self.y = y
+        self.x = x  # pylint: disable=invalid-name
+        self.y = y  # pylint: disable=invalid-name
 
     def move(self, direction):
         if not direction:
@@ -16,9 +16,9 @@ class Snake:
         self.direction = direction
         self.move_to(self.x + direction.value[0], self.y + direction.value[1])
 
-    def move_to(self, x, y):
-        self.x = x
-        self.y = y
+    def move_to(self, x, y):  # pylint: disable=invalid-name
+        self.x = x  # pylint: disable=invalid-name
+        self.y = y  # pylint: disable=invalid-name
         self.body.append([self.x, self.y])
         self.body.pop(0)
 
@@ -27,7 +27,8 @@ class Snake:
 
     def collides(self):
         # Border collisions
-        if self.x < 0 or self.y < 0 or self.x > self.snake_game.game_x or self.y > self.snake_game.game_y:
+        if self.x < 0 or self.y < 0 \
+                or self.x > self.snake_game.game_x or self.y > self.snake_game.game_y:
             return True
         # Body collisions
         for body_part in self.body[:-1]:
