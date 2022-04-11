@@ -65,4 +65,3 @@ class UI:
         self.show_ui()
         self.current_view = InstructionsView(self.root, self.show_main_view)
         self.current_view.pack()
-

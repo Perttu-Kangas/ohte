@@ -33,7 +33,8 @@ class SnakeGameLoop:
         pygame.init()
         pygame.display.set_caption("Matopeli")
         self.game = snake_game
-        self.display = pygame.display.set_mode((self.game.game_x, self.game.game_y))
+        self.display = pygame.display.set_mode(
+            (self.game.game_x, self.game.game_y))
         self.clock = pygame.time.Clock()
 
     def tick(self):

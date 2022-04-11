@@ -63,7 +63,8 @@ class SettingsView:
             *list_color
         )
 
-        board_color_label = ttk.Label(master=self.frame, text="Pelikentän väri:")
+        board_color_label = ttk.Label(
+            master=self.frame, text="Pelikentän väri:")
         board_color_var = StringVar()
         board_color_var.set(player.background_color)
         board_color_choice = ttk.OptionMenu(
@@ -73,13 +74,22 @@ class SettingsView:
             *list_color
         )
 
-        back_button.grid(row=0, column=0, sticky=constants.EW, padx=10, pady=10)
+        back_button.grid(row=0, column=0, sticky=constants.EW,
+                         padx=10, pady=10)
         info_label.grid(row=1, column=0, sticky=constants.EW, padx=10, pady=10)
-        difficulty_label.grid(row=2, column=0, sticky=constants.W, padx=10, pady=10)
-        difficulty_choice.grid(row=2, column=1, sticky=constants.EW, padx=10, pady=10)
-        snake_color_label.grid(row=3, column=0, sticky=constants.W, padx=10, pady=10)
-        snake_color_choice.grid(row=3, column=1, sticky=constants.EW, padx=10, pady=10)
-        apple_color_label.grid(row=4, column=0, sticky=constants.W, padx=10, pady=10)
-        apple_color_choice.grid(row=4, column=1, sticky=constants.EW, padx=10, pady=10)
-        board_color_label.grid(row=5, column=0, sticky=constants.W, padx=10, pady=10)
-        board_color_choice.grid(row=5, column=1, sticky=constants.EW, padx=10, pady=10)
+        difficulty_label.grid(
+            row=2, column=0, sticky=constants.W, padx=10, pady=10)
+        difficulty_choice.grid(
+            row=2, column=1, sticky=constants.EW, padx=10, pady=10)
+        snake_color_label.grid(
+            row=3, column=0, sticky=constants.W, padx=10, pady=10)
+        snake_color_choice.grid(
+            row=3, column=1, sticky=constants.EW, padx=10, pady=10)
+        apple_color_label.grid(
+            row=4, column=0, sticky=constants.W, padx=10, pady=10)
+        apple_color_choice.grid(
+            row=4, column=1, sticky=constants.EW, padx=10, pady=10)
+        board_color_label.grid(
+            row=5, column=0, sticky=constants.W, padx=10, pady=10)
+        board_color_choice.grid(
+            row=5, column=1, sticky=constants.EW, padx=10, pady=10)

@@ -26,8 +26,10 @@ class LoginView:
         )
 
         login_label.grid(row=0, column=0, sticky=constants.W, padx=10, pady=10)
-        login_entry.grid(row=0, column=1, sticky=constants.EW, padx=10, pady=10)
-        login_button.grid(row=2, column=0, columnspan=2, sticky=constants.EW, padx=10, pady=10)
+        login_entry.grid(row=0, column=1, sticky=constants.EW,
+                         padx=10, pady=10)
+        login_button.grid(row=2, column=0, columnspan=2,
+                          sticky=constants.EW, padx=10, pady=10)
 
     def handle_login(self):
         self.show_main_view()

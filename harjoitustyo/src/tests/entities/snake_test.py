@@ -43,6 +43,3 @@ class TestSnake(unittest.TestCase):
         self.snake.grow()
         self.snake.move(Direction.LEFT)
         self.assertTrue(self.snake.collides())
-
-
-

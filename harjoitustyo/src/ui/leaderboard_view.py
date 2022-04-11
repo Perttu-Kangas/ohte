@@ -25,19 +25,28 @@ class LeaderboardView:
 
         info_label = ttk.Label(master=self.frame, text="Tulostaulu")
 
-        own_best_label = ttk.Label(master=self.frame, text="Parhaat pisteesi: x")
-        own_total_label = ttk.Label(master=self.frame, text="Pisteitä kaikenkaikkiaan: x")
+        own_best_label = ttk.Label(
+            master=self.frame, text="Parhaat pisteesi: x")
+        own_total_label = ttk.Label(
+            master=self.frame, text="Pisteitä kaikenkaikkiaan: x")
         own_time_label = ttk.Label(master=self.frame, text="Peliaika: x")
 
         top_ten_label = ttk.Label(master=self.frame, text="Parhaat 10")
 
-        back_button.grid(row=0, column=0, sticky=constants.EW, padx=10, pady=10)
+        back_button.grid(row=0, column=0, sticky=constants.EW,
+                         padx=10, pady=10)
         info_label.grid(row=1, column=0, sticky=constants.EW, padx=10, pady=10)
-        own_best_label.grid(row=2, column=0, sticky=constants.EW, padx=10, pady=10)
-        own_total_label.grid(row=3, column=0, sticky=constants.EW, padx=10, pady=10)
-        own_time_label.grid(row=4, column=0, sticky=constants.EW, padx=10, pady=10)
-        top_ten_label.grid(row=5, column=0, sticky=constants.EW, padx=10, pady=10)
+        own_best_label.grid(
+            row=2, column=0, sticky=constants.EW, padx=10, pady=10)
+        own_total_label.grid(
+            row=3, column=0, sticky=constants.EW, padx=10, pady=10)
+        own_time_label.grid(
+            row=4, column=0, sticky=constants.EW, padx=10, pady=10)
+        top_ten_label.grid(
+            row=5, column=0, sticky=constants.EW, padx=10, pady=10)
 
         for i in range(1, 11):
-            top_label = ttk.Label(master=self.frame, text=str(i) + ". Pelaaja" + str(i) + " x")
-            top_label.grid(row=(5 + i), column=0, sticky=constants.EW, padx=10, pady=10)
+            top_label = ttk.Label(master=self.frame, text=str(
+                i) + ". Pelaaja" + str(i) + " x")
+            top_label.grid(row=(5 + i), column=0,
+                           sticky=constants.EW, padx=10, pady=10)

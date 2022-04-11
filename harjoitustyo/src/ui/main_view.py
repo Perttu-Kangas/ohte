@@ -46,10 +46,14 @@ class MainView:
         )
 
         info_label.grid(row=0, column=0, sticky=constants.EW, padx=10, pady=10)
-        start_game_button.grid(row=1, column=0, sticky=constants.EW, padx=10, pady=10)
-        settings_button.grid(row=2, column=0, sticky=constants.EW, padx=10, pady=10)
-        instructions_button.grid(row=3, column=0, sticky=constants.EW, padx=10, pady=10)
-        leaderboard_button.grid(row=4, column=0, sticky=constants.EW, padx=10, pady=10)
+        start_game_button.grid(
+            row=1, column=0, sticky=constants.EW, padx=10, pady=10)
+        settings_button.grid(
+            row=2, column=0, sticky=constants.EW, padx=10, pady=10)
+        instructions_button.grid(
+            row=3, column=0, sticky=constants.EW, padx=10, pady=10)
+        leaderboard_button.grid(
+            row=4, column=0, sticky=constants.EW, padx=10, pady=10)
 
     def handle_start_game(self):
         self.hide_ui()

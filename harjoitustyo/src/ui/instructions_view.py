@@ -26,5 +26,6 @@ class InstructionsView:
 
         info_label = ttk.Label(master=self.frame, text="Peliohjeet")
 
-        back_button.grid(row=0, column=0, sticky=constants.EW, padx=10, pady=10)
+        back_button.grid(row=0, column=0, sticky=constants.EW,
+                         padx=10, pady=10)
         info_label.grid(row=1, column=0, sticky=constants.EW, padx=10, pady=10)
