@@ -11,18 +11,18 @@ class TestSnake(unittest.TestCase):
         self.snake = self.snake_game.snake
 
     def test_first_position(self):
-        self.assertEqual(self.snake.x, 150)
-        self.assertEqual(self.snake.y, 150)
+        self.assertEqual(self.snake.snake_x, 150)
+        self.assertEqual(self.snake.snake_y, 150)
 
     def test_move(self):
         self.snake.move(Direction.RIGHT)
-        self.assertEqual(self.snake.x, 160)
+        self.assertEqual(self.snake.snake_x, 160)
         self.snake.move(Direction.DOWN)
-        self.assertEqual(self.snake.y, 160)
+        self.assertEqual(self.snake.snake_y, 160)
         self.snake.move(Direction.LEFT)
-        self.assertEqual(self.snake.x, 150)
+        self.assertEqual(self.snake.snake_x, 150)
         self.snake.move(Direction.UP)
-        self.assertEqual(self.snake.y, 150)
+        self.assertEqual(self.snake.snake_y, 150)
 
     def test_grow(self):
         self.snake.grow()
