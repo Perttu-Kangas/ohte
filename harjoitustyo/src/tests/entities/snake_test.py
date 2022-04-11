@@ -1,11 +1,13 @@
 import unittest
 from enums.game_enums import Direction
 from services.snake_game import SnakeGame
+from entities.player import Player
 
 
 class TestSnake(unittest.TestCase):
     def setUp(self):
-        self.snake_game = SnakeGame()
+        self.player = Player("test")
+        self.snake_game = SnakeGame(self.player)
         self.snake = self.snake_game.snake
 
     def test_first_position(self):
