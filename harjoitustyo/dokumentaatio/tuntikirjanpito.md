@@ -6,11 +6,11 @@
 |  4.4  | 2    | projektin pohjan miettimistä                     |
 |       | 1.5  | matopelin pohjan toteuttaminen                   |
 |       | 0.5  | dokumentaatio, readme päivitys                   |
+| 10.4  | 1    | UI aloittelua                                    |
+| 11.4  | 3    | Alustava UI                                      |
+|       | 2    | Pylint, pep sekä arkkitehtuuri säätöä            |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
-|       |      |                                                  |
-|       |      |                                                  |
-|       |      |                                                  |
-|  yht  | 6    |                                                  | 
+|  yht  | 11   |                                                  | 
