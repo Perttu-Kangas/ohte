@@ -24,3 +24,8 @@ def coverage_report(ctx):
 @task
 def autopep(ctx):
     ctx.run("autopep8 --in-place --recursive src", pty=True)
+
+
+@task
+def lint(ctx):
+    ctx.run("pylint src", pty=True)

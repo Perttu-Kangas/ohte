@@ -1,5 +1,5 @@
-import pygame
 from enum import Enum
+import pygame
 
 
 class Difficulty(Enum):
