@@ -4,11 +4,14 @@ from services.snake_game import SnakeGame
 
 
 class MainView:
-    def __init__(self, root, hide_ui, show_main_view):
+    def __init__(self, root, hide_ui, show_main_view, show_settings_view, show_instructions_view, show_leaderboard_view):
         self.root = root
         self.frame = None
         self.hide_ui = hide_ui
         self.show_main_view = show_main_view
+        self.show_settings_view = show_settings_view
+        self.show_instructions_view = show_instructions_view
+        self.show_leaderboard_view = show_leaderboard_view
 
         self.initialize()
 
@@ -28,15 +31,18 @@ class MainView:
         )
         settings_button = ttk.Button(
             master=self.frame,
-            text="Asetukset"
+            text="Asetukset",
+            command=self.show_settings_view
         )
         instructions_button = ttk.Button(
             master=self.frame,
-            text="Peliohjeet"
+            text="Peliohjeet",
+            command=self.show_instructions_view
         )
         leaderboard_button = ttk.Button(
             master=self.frame,
-            text="Tulostaulu"
+            text="Tulostaulu",
+            command=self.show_leaderboard_view
         )
 
         info_label.grid(row=0, column=0, sticky=constants.EW, padx=10, pady=10)

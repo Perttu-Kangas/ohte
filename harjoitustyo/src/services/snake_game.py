@@ -30,7 +30,7 @@ class SnakeGameLoop:
     def __init__(self, snake_game: SnakeGame, player: Player):
         self.player = player
         pygame.init()
-        pygame.display.set_caption("Snake Game")
+        pygame.display.set_caption("Matopeli")
         self.game = snake_game
         self.display = pygame.display.set_mode((self.game.game_x, self.game.game_y))
         self.clock = pygame.time.Clock()

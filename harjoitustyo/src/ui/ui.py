@@ -1,6 +1,9 @@
 from tkinter import Tk
 from ui.login_view import LoginView
 from ui.main_view import MainView
+from ui.settings_view import SettingsView
+from ui.leaderboard_view import LeaderboardView
+from ui.instructions_view import InstructionsView
 
 
 class UI:
@@ -37,6 +40,29 @@ class UI:
     def show_main_view(self):
         self.hide_current_view()
         self.show_ui()
-        self.current_view = MainView(self.root, self.hide_ui, self.show_main_view)
+        self.current_view = MainView(self.root,
+                                     self.hide_ui,
+                                     self.show_main_view,
+                                     self.show_settings_view,
+                                     self.show_instructions_view,
+                                     self.show_leaderboard_view)
+        self.current_view.pack()
+
+    def show_settings_view(self):
+        self.hide_current_view()
+        self.show_ui()
+        self.current_view = SettingsView(self.root, self.show_main_view)
+        self.current_view.pack()
+
+    def show_leaderboard_view(self):
+        self.hide_current_view()
+        self.show_ui()
+        self.current_view = LeaderboardView(self.root, self.show_main_view)
+        self.current_view.pack()
+
+    def show_instructions_view(self):
+        self.hide_current_view()
+        self.show_ui()
+        self.current_view = InstructionsView(self.root, self.show_main_view)
         self.current_view.pack()
 
