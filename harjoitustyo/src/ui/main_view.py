@@ -58,6 +58,6 @@ class MainView:
     def handle_start_game(self):
         self.hide_ui()
 
-        player = Player("test")
+        player = Player("test", 1)
         snake_game = SnakeGame(player)
         snake_game.start(self.show_main_view)

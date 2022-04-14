@@ -20,7 +20,7 @@ class SettingsView:
     def initialize(self):
         self.frame = ttk.Frame(master=self.root)
 
-        player = Player("test")
+        player = Player("test", 1)
 
         back_button = ttk.Button(
             master=self.frame,

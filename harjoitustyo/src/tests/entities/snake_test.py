@@ -6,7 +6,7 @@ from entities.player import Player
 
 class TestSnake(unittest.TestCase):
     def setUp(self):
-        self.player = Player("test")
+        self.player = Player("test", 1)
         self.snake_game = SnakeGame(self.player)
         self.snake = self.snake_game.snake
 
