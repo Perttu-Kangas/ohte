@@ -27,6 +27,9 @@ build/
 log/
 target/
 
+# Python
+__pycache__
+
 # PyTest
 .pytest_cache
 
