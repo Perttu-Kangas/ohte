@@ -39,3 +39,7 @@ htmlcov
 
 # Mostly commands
 private.txt
+
+# Sqlite
+*/src/*.sqlite
+*/src/*.db

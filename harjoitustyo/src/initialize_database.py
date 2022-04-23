@@ -10,16 +10,16 @@ def create_tables(connection):
 
     cursor.execute("CREATE TABLE IF NOT EXISTS player_settings"
                    "(player_id INTEGER REFERENCES players,"
-                   "apple INTEGER,"
-                   "snake INTEGER,"
-                   "background INTEGER,"
-                   "difficulty INTEGER)")
+                   "apple TEXT,"
+                   "snake TEXT,"
+                   "background TEXT,"
+                   "difficulty TEXT)")
 
     cursor.execute("CREATE TABLE IF NOT EXISTS games"
                    "(player_id INTEGER REFERENCES players,"
                    "points INTEGER,"
                    "time INTEGER,"
-                   "difficulty INTEGER)")
+                   "difficulty TEXT)")
 
     connection.commit()
 
