@@ -4,14 +4,16 @@ from ui.main_view import MainView
 from ui.settings_view import SettingsView
 from ui.leaderboard_view import LeaderboardView
 from ui.instructions_view import InstructionsView
+from services.ui_logic import UILogic
 
 
 class UI:
 
-    def __init__(self, root: Tk):
+    def __init__(self, root: Tk, ui_logic: UILogic):
         self.root = root
         self.current_view = None
         self.hidden = False
+        self.ui_logic = ui_logic
 
     def start(self):
         self.show_login_view()
@@ -34,7 +36,7 @@ class UI:
     def show_login_view(self):
         self.hide_current_view()
         self.show_ui()
-        self.current_view = LoginView(self.root, self.show_main_view)
+        self.current_view = LoginView(self.root, self.show_main_view, self.ui_logic.login)
         self.current_view.pack()
 
     def show_main_view(self):

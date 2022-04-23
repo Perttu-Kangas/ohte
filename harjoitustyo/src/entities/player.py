@@ -1,12 +1,9 @@
-from enums.game_enums import Difficulty, Color
-
-
 class Player:
 
-    def __init__(self, name, player_id):
+    def __init__(self, name, player_id, difficulty, apple, snake, background):
         self.name = name
         self.player_id = player_id
-        self.difficulty = Difficulty.EASY
-        self.apple_color = Color.RED
-        self.snake_color = Color.BLACK
-        self.background_color = Color.GREEN
+        self.difficulty = difficulty
+        self.apple_color = apple
+        self.snake_color = snake
+        self.background_color = background
