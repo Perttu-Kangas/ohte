@@ -9,8 +9,14 @@
 | 10.4  | 1    | UI aloittelua                                    |
 | 11.4  | 3    | Alustava UI                                      |
 |       | 2    | Pylint, pep sekä arkkitehtuuri säätöä            |
+| 14.4  | 0.5  | SQLite alustusta                                 |
+| 23.4  | 0.5  | Configuraatio SQLite db sijainnille              |
+|       | 3    | Kirjautuminen db kanssa                          |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
-|  yht  | 11   |                                                  | 
+|       |      |                                                  |
+|       |      |                                                  |
+|       |      |                                                  |
+|  yht  | 15   |                                                  | 
