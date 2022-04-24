@@ -36,7 +36,8 @@ class LeaderboardView:
             master=self.frame, text="Parhaat pisteesi: " + player_best)
         own_total_label = ttk.Label(
             master=self.frame, text="Pisteitä kaikenkaikkiaan: " + player_all)
-        own_time_label = ttk.Label(master=self.frame, text="Peliaika: " + player_time)
+        own_time_label = ttk.Label(
+            master=self.frame, text="Peliaika: " + player_time)
 
         top_ten_label = ttk.Label(master=self.frame,
                                   text="Parhaat 3 vaikeusasteella " + self.ui_logic.player.difficulty.name)

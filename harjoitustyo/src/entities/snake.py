@@ -14,7 +14,8 @@ class Snake:
         if not direction:
             direction = self.direction
         self.direction = direction
-        self.move_to(self.snake_x + direction.value[0], self.snake_y + direction.value[1])
+        self.move_to(self.snake_x +
+                     direction.value[0], self.snake_y + direction.value[1])
 
     def move_to(self, to_x, to_y):
         self.snake_x = to_x

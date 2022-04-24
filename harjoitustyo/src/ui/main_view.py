@@ -25,7 +25,8 @@ class MainView:
 
     def initialize(self):
         self.frame = ttk.Frame(master=self.root)
-        info_label = ttk.Label(master=self.frame, text="Tervetuloa " + self.ui_logic.player.name + "!")
+        info_label = ttk.Label(
+            master=self.frame, text="Tervetuloa " + self.ui_logic.player.name + "!")
         start_game_button = ttk.Button(
             master=self.frame,
             text="Aloita peli",

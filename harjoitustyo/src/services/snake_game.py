@@ -41,7 +41,8 @@ class SnakeGame:
 
     def save_game(self):
         duration = int(time.time() - self.start_time)
-        self.game_repository.save_game(self.player, self.snake_game_loop.points, duration)
+        self.game_repository.save_game(
+            self.player, self.snake_game_loop.points, duration)
 
 
 class SnakeGameLoop:

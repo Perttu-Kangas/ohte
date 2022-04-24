@@ -32,12 +32,13 @@ class LoginView:
             command=self.handle_login
         )
         self.error_var = StringVar(master=self.frame)
-        self.error = ttk.Label(master=self.frame, textvariable=self.error_var, foreground="RED")
+        self.error = ttk.Label(
+            master=self.frame, textvariable=self.error_var, foreground="RED")
         self.error.grid(row=3, column=0, sticky=constants.EW, padx=10, pady=10)
 
         login_label.grid(row=0, column=0, sticky=constants.W, padx=10, pady=10)
         self.login_entry.grid(row=0, column=1, sticky=constants.EW,
-                         padx=10, pady=10)
+                              padx=10, pady=10)
         login_button.grid(row=2, column=0, columnspan=2,
                           sticky=constants.EW, padx=10, pady=10)
 

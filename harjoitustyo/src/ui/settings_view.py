@@ -37,7 +37,8 @@ class SettingsView:
         difficulty_label = ttk.Label(master=self.frame, text="Vaikeusaste:")
         self.difficulty_var = StringVar()
         self.difficulty_var.set(self.ui_logic.player.difficulty.name)
-        list_difficulty = list(map(lambda difficulty: difficulty.name, Difficulty))
+        list_difficulty = list(
+            map(lambda difficulty: difficulty.name, Difficulty))
         difficulty_choice = ttk.OptionMenu(
             self.frame,
             self.difficulty_var,
@@ -102,6 +103,7 @@ class SettingsView:
         self.ui_logic.player.difficulty = Difficulty[self.difficulty_var.get()]
         self.ui_logic.player.snake_color = Color[self.snake_var.get()]
         self.ui_logic.player.apple_color = Color[self.apple_var.get()]
-        self.ui_logic.player.background_color = Color[self.background_var.get()]
+        self.ui_logic.player.background_color = Color[self.background_var.get(
+        )]
         self.ui_logic.save_player()
         self.show_main_view()

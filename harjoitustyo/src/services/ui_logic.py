@@ -25,7 +25,8 @@ class UILogic:
         player = self.player_repository.find_by_playername(playername)
 
         if not player:
-            player = Player(playername, -1, Difficulty.MEDIUM, Color.RED, Color.BLACK, Color.GREEN)
+            player = Player(playername, -1, Difficulty.MEDIUM,
+                            Color.RED, Color.BLACK, Color.GREEN)
             self.player = self.player_repository.create(player)
             return
         else:
