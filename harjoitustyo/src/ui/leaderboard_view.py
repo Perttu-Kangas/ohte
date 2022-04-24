@@ -28,9 +28,9 @@ class LeaderboardView:
         info_label = ttk.Label(master=self.frame, text="Tulostaulu")
 
         player_own = self.ui_logic.get_own_best()
-        player_best = "0" if None else str(player_own[0])
-        player_all = "0" if None else str(player_own[1])
-        player_time = "0" if None else str(player_own[2])
+        player_best = "0" if player_own[0] is None else str(player_own[0])
+        player_all = "0" if player_own[1] is None else str(player_own[1])
+        player_time = "0" if player_own[2] is None else str(player_own[2])
 
         own_best_label = ttk.Label(
             master=self.frame, text="Parhaat pisteesi: " + player_best)
