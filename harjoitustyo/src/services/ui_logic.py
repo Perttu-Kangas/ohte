@@ -25,5 +25,10 @@ class UILogic:
         else:
             self.player = player
 
+    def save(self):
+        if not self.player:
+            return
+        self.player_repository.save_settings(self.player)
+
 
 ui_logic = UILogic()

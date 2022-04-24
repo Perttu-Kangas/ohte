@@ -1,13 +1,19 @@
 from tkinter import ttk, constants, StringVar
-from entities.player import Player
 from enums.game_enums import Difficulty, Color
+from services.ui_logic import UILogic
 
 
 class SettingsView:
-    def __init__(self, root, show_main_view):
+    def __init__(self, root, ui_logic: UILogic, show_main_view):
         self.root = root
+        self.ui_logic = ui_logic
         self.frame = None
         self.show_main_view = show_main_view
+
+        self.difficulty_var = None
+        self.snake_var = None
+        self.apple_var = None
+        self.background_var = None
 
         self.initialize()
 
@@ -20,57 +26,55 @@ class SettingsView:
     def initialize(self):
         self.frame = ttk.Frame(master=self.root)
 
-        player = Player("test", 1)
-
         back_button = ttk.Button(
             master=self.frame,
             text="Takaisin päävalikkoon",
-            command=self.show_main_view
+            command=self.back_to_main_view
         )
 
         info_label = ttk.Label(master=self.frame, text="Asetukset")
 
         difficulty_label = ttk.Label(master=self.frame, text="Vaikeusaste:")
-        difficulty_var = StringVar()
-        difficulty_var.set(player.difficulty)
-        list_difficulty = list(Difficulty)
+        self.difficulty_var = StringVar()
+        self.difficulty_var.set(self.ui_logic.player.difficulty.name)
+        list_difficulty = list(map(lambda difficulty: difficulty.name, Difficulty))
         difficulty_choice = ttk.OptionMenu(
             self.frame,
-            difficulty_var,
-            player.difficulty,
+            self.difficulty_var,
+            self.ui_logic.player.difficulty.name,
             *list_difficulty
         )
 
-        list_color = list(Color)
+        list_color = list(map(lambda color: color.name, Color))
 
         snake_color_label = ttk.Label(master=self.frame, text="Madon väri:")
-        snake_color_var = StringVar()
-        snake_color_var.set(player.snake_color)
+        self.snake_var = StringVar()
+        self.snake_var.set(self.ui_logic.player.snake_color.name)
         snake_color_choice = ttk.OptionMenu(
             self.frame,
-            snake_color_var,
-            player.snake_color,
+            self.snake_var,
+            self.ui_logic.player.snake_color.name,
             *list_color
         )
 
         apple_color_label = ttk.Label(master=self.frame, text="Omenan väri:")
-        apple_color_var = StringVar()
-        apple_color_var.set(player.apple_color)
+        self.apple_var = StringVar()
+        self.apple_var.set(self.ui_logic.player.apple_color.name)
         apple_color_choice = ttk.OptionMenu(
             self.frame,
-            apple_color_var,
-            player.apple_color,
+            self.apple_var,
+            self.ui_logic.player.apple_color.name,
             *list_color
         )
 
         board_color_label = ttk.Label(
             master=self.frame, text="Pelikentän väri:")
-        board_color_var = StringVar()
-        board_color_var.set(player.background_color)
+        self.background_var = StringVar()
+        self.background_var.set(self.ui_logic.player.background_color.name)
         board_color_choice = ttk.OptionMenu(
             self.frame,
-            board_color_var,
-            player.background_color,
+            self.background_var,
+            self.ui_logic.player.background_color.name,
             *list_color
         )
 
@@ -93,3 +97,11 @@ class SettingsView:
             row=5, column=0, sticky=constants.W, padx=10, pady=10)
         board_color_choice.grid(
             row=5, column=1, sticky=constants.EW, padx=10, pady=10)
+
+    def back_to_main_view(self):
+        self.ui_logic.player.difficulty = Difficulty[self.difficulty_var.get()]
+        self.ui_logic.player.snake_color = Color[self.snake_var.get()]
+        self.ui_logic.player.apple_color = Color[self.apple_var.get()]
+        self.ui_logic.player.background_color = Color[self.background_var.get()]
+        self.ui_logic.save()
+        self.show_main_view()

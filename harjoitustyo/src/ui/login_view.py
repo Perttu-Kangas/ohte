@@ -1,13 +1,14 @@
 from tkinter import ttk, constants, StringVar
+from services.ui_logic import UILogic
 
 
 class LoginView:
-    def __init__(self, root, show_main_view, login):
+    def __init__(self, root, ui_logic: UILogic, show_main_view):
         self.root = root
         self.frame = None
         self.show_main_view = show_main_view
 
-        self.login = login
+        self.login = ui_logic.login
         self.login_entry = None
 
         self.error = None

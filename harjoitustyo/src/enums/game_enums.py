@@ -4,8 +4,8 @@ import pygame
 
 class Difficulty(Enum):
     EASY = 10
-    MEDIUM = 20
-    HARD = 30
+    MEDIUM = 15
+    HARD = 20
 
 
 class Color(Enum):

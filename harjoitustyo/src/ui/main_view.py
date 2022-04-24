@@ -1,11 +1,13 @@
 from tkinter import ttk, constants
-from entities.player import Player
 from services.snake_game import SnakeGame
+from services.ui_logic import UILogic
 
 
 class MainView:
-    def __init__(self, root, hide_ui, show_main_view, show_settings_view, show_instructions_view, show_leaderboard_view):
+    def __init__(self, root, ui_logic: UILogic, hide_ui, show_main_view,
+                 show_settings_view, show_instructions_view, show_leaderboard_view):
         self.root = root
+        self.ui_logic = ui_logic
         self.frame = None
         self.hide_ui = hide_ui
         self.show_main_view = show_main_view
@@ -23,7 +25,7 @@ class MainView:
 
     def initialize(self):
         self.frame = ttk.Frame(master=self.root)
-        info_label = ttk.Label(master=self.frame, text="Tervetuloa player!")
+        info_label = ttk.Label(master=self.frame, text="Tervetuloa " + self.ui_logic.player.name + "!")
         start_game_button = ttk.Button(
             master=self.frame,
             text="Aloita peli",
@@ -58,6 +60,5 @@ class MainView:
     def handle_start_game(self):
         self.hide_ui()
 
-        player = Player("test", 1)
-        snake_game = SnakeGame(player)
+        snake_game = SnakeGame(self.ui_logic.player)
         snake_game.start(self.show_main_view)

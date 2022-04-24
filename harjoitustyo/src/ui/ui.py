@@ -36,13 +36,14 @@ class UI:
     def show_login_view(self):
         self.hide_current_view()
         self.show_ui()
-        self.current_view = LoginView(self.root, self.show_main_view, self.ui_logic.login)
+        self.current_view = LoginView(self.root, self.ui_logic, self.show_main_view)
         self.current_view.pack()
 
     def show_main_view(self):
         self.hide_current_view()
         self.show_ui()
         self.current_view = MainView(self.root,
+                                     self.ui_logic,
                                      self.hide_ui,
                                      self.show_main_view,
                                      self.show_settings_view,
@@ -53,7 +54,7 @@ class UI:
     def show_settings_view(self):
         self.hide_current_view()
         self.show_ui()
-        self.current_view = SettingsView(self.root, self.show_main_view)
+        self.current_view = SettingsView(self.root, self.ui_logic, self.show_main_view)
         self.current_view.pack()
 
     def show_leaderboard_view(self):
