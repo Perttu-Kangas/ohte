@@ -22,19 +22,10 @@ Sovellus koostuu kuudesta eri näkymästä
   * Sisältää itse pelikentän
 
 ## Perusversion tarjoama toiminnallisuus
-
-#### Toteutettu
-* Perusversio valikoista
-* Perusversio pelistä
-* Perusversioon **EI** sisälly:
-  * Mitään tiedontallentamiseen liittyvää
   
-
-<br>
-  
-* Kirjautuminen
-  * Voi kirjautua käyttäjänimellä tai luoda uuden käyttäjän
-  * Käyttäjänimen täytyy olla vähintään 4 merkkiä ja uniikki
+* Kirjautuminen | TEHTY
+  * Voi kirjautua käyttäjänimellä tai luoda uuden käyttäjän | TEHTY
+  * Käyttäjänimen täytyy olla vähintään 4 merkkiä ja uniikki | TEHTY
 * Päävalikko | TEHTY
   * Aloita peli painike | TEHTY
   * Asetukset painike | TEHTY
@@ -50,8 +41,8 @@ Sovellus koostuu kuudesta eri näkymästä
   * Yksinkertaiset ohjeet kuinka peliä pelataan
 * Tulostaulu
   * Takaisin päävalikkoon painike | TEHTY
-  * Pelaajan parhaat pisteet, kaikenkaikkiaan saadut pisteet sekä peliä pelattu aika
-  * Parhaiden kolmen pelaajan pisteet
+  * Pelaajan parhaat pisteet, kaikenkaikkiaan saadut pisteet sekä peliä pelattu aika | TEHTY
+  * Parhaiden kolmen pelaajan pisteet | TEHTY
 * Peli
   * Pelikenttä | TEHTY
     * Mato liikkuu pelikentällä | TEHTY
@@ -65,7 +56,7 @@ Sovellus koostuu kuudesta eri näkymästä
     * Pelikentällä on jatkuvasti yksi omena | TEHTY
     * Madon syödessä omenan, uusi omena luodaan satunnaiseen paikkaan pelikentällä | TEHTY
     * Omenaa ei voida luoda madon päälle
-    * Pelaaja saa pisteen, kun mato syö omenan
+    * Pelaaja saa pisteen, kun mato syö omenan | TEHTY
     * Pelaaja voittaa pelin, mikäli omenan syötyään mato peittää koko pelikentän
   * Pelin päättyessä
     * Pelaajan pisteet sekä pelissä kulunut aika tallennetaan

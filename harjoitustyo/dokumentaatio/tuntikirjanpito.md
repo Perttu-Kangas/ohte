@@ -14,9 +14,9 @@
 |       | 3    | Kirjautuminen db kanssa                          |
 | 24.4  | 1    | Asetukset db kanssa                              |
 |       | 1    | Tulostaulu db kanssa                             |
+|       | 0.5  | Pylint, pep                                      |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
-|       |      |                                                  |
-|  yht  | 17   |                                                  | 
+|  yht  | 17.5 |                                                  | 
