@@ -2,6 +2,10 @@
 Sovelluksella pystyy pelaamaan [matopeliä](https://fi.wikipedia.org/wiki/Matopeli).
 Sovellusta voi käyttää vain yksi pelaaja kerrallaan.
 
+## Julkaisu
+
+- [0.1.0](https://github.com/DeeCaaD/ohte/releases/latest/)  
+
 ## Dokumentaatio
 
 - [Vaatimusmäärittely](harjoitustyo/dokumentaatio/vaatimusmaarittely.md)  

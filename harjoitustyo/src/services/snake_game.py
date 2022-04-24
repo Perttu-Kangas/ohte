@@ -28,7 +28,6 @@ class SnakeGame:
         self.game_repository = game_repository
         self.start_time = None
 
-
     def start(self, show_main_view):
         self.snake_game_loop = SnakeGameLoop(self, self.player)
 

@@ -6,3 +6,9 @@
 ## Viikko 4
 * Toteutettu alustava UI
 * Refaktoroitu koodia
+
+# Viikko 5
+* Tietokanta integraatiot
+  * Asetukset
+  * Pelin tulosten tallennus
+  * Kirjautuminen
