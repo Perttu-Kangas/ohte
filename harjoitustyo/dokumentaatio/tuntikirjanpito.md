@@ -12,11 +12,11 @@
 | 14.4  | 0.5  | SQLite alustusta                                 |
 | 23.4  | 0.5  | Configuraatio SQLite db sijainnille              |
 |       | 3    | Kirjautuminen db kanssa                          |
+| 24.4  | 1    | Asetukset db kanssa                              |
+|       | 1    | Tulostaulu db kanssa                             |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
-|       |      |                                                  |
-|       |      |                                                  |
-|  yht  | 15   |                                                  | 
+|  yht  | 17   |                                                  | 
