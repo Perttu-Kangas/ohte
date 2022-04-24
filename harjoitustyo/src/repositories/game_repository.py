@@ -10,7 +10,8 @@ class GameRepository:
     def save_game(self, player: Player, points, time):
         cursor = self.connection.cursor()
 
-        cursor.execute("INSERT INTO games (player_id, points, time, difficulty) VALUES (?, ?, ?, ?)",
+        cursor.execute("INSERT INTO games (player_id, points, time, difficulty) "
+                       "VALUES (?, ?, ?, ?)",
                        (player.player_id, points, time, player.difficulty.name))
 
         self.connection.commit()

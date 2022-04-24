@@ -1,5 +1,6 @@
-import pygame
 import time
+
+import pygame
 
 from entities.apple import Apple
 from entities.player import Player

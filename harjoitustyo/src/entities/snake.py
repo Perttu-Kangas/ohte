@@ -29,7 +29,8 @@ class Snake:
     def collides(self):
         # Border collisions
         if self.snake_x < 0 or self.snake_y < 0 \
-                or self.snake_x > self.snake_game.game_x - 10 or self.snake_y > self.snake_game.game_y - 10:
+                or self.snake_x > self.snake_game.game_x - 10 \
+                or self.snake_y > self.snake_game.game_y - 10:
             return True
         # Body collisions
         for body_part in self.body[:-1]:

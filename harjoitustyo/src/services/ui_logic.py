@@ -28,7 +28,6 @@ class UILogic:
             player = Player(playername, -1, Difficulty.MEDIUM,
                             Color.RED, Color.BLACK, Color.GREEN)
             self.player = self.player_repository.create(player)
-            return
         else:
             self.player = player
 
