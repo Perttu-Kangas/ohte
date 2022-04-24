@@ -22,6 +22,13 @@ Sovellus koostuu kuudesta eri näkymästä
   * Sisältää itse pelikentän
 
 ## Perusversion tarjoama toiminnallisuus
+
+#### Tekemättä
+* Pelin päättymisvalikko
+* Viilauksia itse peliin
+* Käyttöliittymmästä hienompi
+
+<br>
   
 * Kirjautuminen | TEHTY
   * Voi kirjautua käyttäjänimellä tai luoda uuden käyttäjän | TEHTY

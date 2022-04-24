@@ -24,6 +24,8 @@ class TestSnake(unittest.TestCase):
         self.assertEqual(self.snake.snake_x, 150)
         self.snake.move(Direction.UP)
         self.assertEqual(self.snake.snake_y, 150)
+        self.snake.move(None)
+        self.assertEqual(self.snake.snake_y, 140)
 
     def test_grow(self):
         self.snake.grow()
@@ -40,9 +42,10 @@ class TestSnake(unittest.TestCase):
     def test_collision_body(self):
         self.snake.move(Direction.RIGHT)
         self.snake.grow()
-        self.snake.move(Direction.RIGHT)
-        self.snake.grow()
-        self.snake.move(Direction.RIGHT)
+        self.snake.move(Direction.UP)
         self.snake.grow()
         self.snake.move(Direction.LEFT)
+        self.snake.grow()
+        self.snake.move(Direction.DOWN)
+        self.snake.grow()
         self.assertTrue(self.snake.collides())
