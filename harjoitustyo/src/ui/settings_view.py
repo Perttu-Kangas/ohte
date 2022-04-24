@@ -103,5 +103,5 @@ class SettingsView:
         self.ui_logic.player.snake_color = Color[self.snake_var.get()]
         self.ui_logic.player.apple_color = Color[self.apple_var.get()]
         self.ui_logic.player.background_color = Color[self.background_var.get()]
-        self.ui_logic.save()
+        self.ui_logic.save_player()
         self.show_main_view()

@@ -60,7 +60,7 @@ class UI:
     def show_leaderboard_view(self):
         self.hide_current_view()
         self.show_ui()
-        self.current_view = LeaderboardView(self.root, self.show_main_view)
+        self.current_view = LeaderboardView(self.root, self.ui_logic, self.show_main_view)
         self.current_view.pack()
 
     def show_instructions_view(self):

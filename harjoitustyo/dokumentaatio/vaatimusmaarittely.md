@@ -51,7 +51,7 @@ Sovellus koostuu kuudesta eri näkymästä
 * Tulostaulu
   * Takaisin päävalikkoon painike | TEHTY
   * Pelaajan parhaat pisteet, kaikenkaikkiaan saadut pisteet sekä peliä pelattu aika
-  * Parhaiden kymmenen pelaajan pisteet
+  * Parhaiden kolmen pelaajan pisteet
 * Peli
   * Pelikenttä | TEHTY
     * Mato liikkuu pelikentällä | TEHTY
