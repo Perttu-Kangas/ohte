@@ -63,7 +63,7 @@ class SnakeGameLoop:
             return True
         if self.game.snake.collides():
             return True
-        if self.game.apple.collides(self.game.snake):
+        if self.game.apple.collides():
             self.game.snake.grow()
             self.game.apple.move()
             self.points += 1
