@@ -16,7 +16,7 @@
 |       | 1    | Tulostaulu db kanssa                             |
 |       | 0.5  | Pylint, pep                                      |
 |       | 0.5  | Sekvenssikaavio, dokumenttien päivitystä         |
+| 28.4  | 1    | Docstring kirjoitusta luokille                   |
 |       |      |                                                  |
 |       |      |                                                  |
-|       |      |                                                  |
-|  yht  | 18   |                                                  | 
+|  yht  | 19   |                                                  | 

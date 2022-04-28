@@ -31,4 +31,4 @@ class TestApple(unittest.TestCase):
     def test_collides_snake(self):
         self.apple.move_to(150, 140)
         self.snake.move(Direction.UP)
-        self.assertTrue(self.apple.collides(self.snake))
+        self.assertTrue(self.apple.collides())
