@@ -13,11 +13,25 @@ def get_user_by_row(row):
 
 
 class PlayerRepository:
+    """Pelaajaan liittyvistä tietokantaoperaatioista vastaava luokka"""
 
     def __init__(self, connection):
+        """Luokan konstruktori.
+
+        Args:
+            connection: Tietokantayhteyden Connection-olio
+        """
         self.connection = connection
 
     def find_by_playername(self, playername):
+        """Hakee pelaajan annetun pelinimen perusteella.
+
+        Args:
+            playername: Merkkijono, joka sisältää pelaajan nimen
+
+        Returns:
+            Player-olio tai None, jos pelaajaa ei löydy tietokannasta
+        """
         cursor = self.connection.cursor()
 
         cursor.execute("SELECT P.player_id, P.playername, PS.apple, "
@@ -29,6 +43,14 @@ class PlayerRepository:
         return get_user_by_row(cursor.fetchone())
 
     def create(self, player: Player):
+        """Tallentaa annetun Player-olion tietokantaan
+
+        Args:
+            player: Player-olio, jonka tiedot tallennetaan
+
+        Returns:
+            Tallennetun Player-olion
+        """
         cursor = self.connection.cursor()
 
         cursor.execute("INSERT INTO players (playername) VALUES (?)",
@@ -47,6 +69,14 @@ class PlayerRepository:
         return player
 
     def save_settings(self, player: Player):
+        """Päivittää annetun Player-olion asetukset tietokantaan
+
+        Args:
+            player: Player-olio, jonka asetukset päivitetään
+
+        Returns:
+            None
+        """
         cursor = self.connection.cursor()
 
         cursor.execute("UPDATE player_settings SET apple=?, "
