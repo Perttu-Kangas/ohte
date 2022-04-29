@@ -24,7 +24,6 @@ Sovellus koostuu kuudesta eri näkymästä
 ## Perusversion tarjoama toiminnallisuus
 
 #### Tekemättä
-* Pelin päättymisvalikko
 * Viilauksia itse peliin
 * Käyttöliittymmästä hienompi
 
@@ -62,12 +61,10 @@ Sovellus koostuu kuudesta eri näkymästä
   * Omena
     * Pelikentällä on jatkuvasti yksi omena | TEHTY
     * Madon syödessä omenan, uusi omena luodaan satunnaiseen paikkaan pelikentällä | TEHTY
-    * Omenaa ei voida luoda madon päälle
     * Pelaaja saa pisteen, kun mato syö omenan | TEHTY
-    * Pelaaja voittaa pelin, mikäli omenan syötyään mato peittää koko pelikentän
-  * Pelin päättyessä
-    * Pelaajan pisteet sekä pelissä kulunut aika tallennetaan
-    * Pelaaja pystyy aloittamaan uuden pelin tai palaamaan päävalikkoon
+  * Pelin päättyessä | TEHTY
+    * Pelaajan pisteet sekä pelissä kulunut aika tallennetaan | TEHTY
+    * Pelaaja pystyy aloittamaan uuden pelin tai palaamaan päävalikkoon | TEHTY
 
 ## Jatkokehitysideoita
 Perusversion jälkeen peliä täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:

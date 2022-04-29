@@ -4,6 +4,7 @@ from ui.main_view import MainView
 from ui.settings_view import SettingsView
 from ui.leaderboard_view import LeaderboardView
 from ui.instructions_view import InstructionsView
+from ui.game_end_view import GameEndView
 from services.ui_logic import UILogic
 
 
@@ -49,7 +50,8 @@ class UI:
                                      self.show_main_view,
                                      self.show_settings_view,
                                      self.show_instructions_view,
-                                     self.show_leaderboard_view)
+                                     self.show_leaderboard_view,
+                                     self.show_game_end_view)
         self.current_view.pack()
 
     def show_settings_view(self):
@@ -70,4 +72,15 @@ class UI:
         self.hide_current_view()
         self.show_ui()
         self.current_view = InstructionsView(self.root, self.show_main_view)
+        self.current_view.pack()
+
+    def show_game_end_view(self, points=0):
+        self.hide_current_view()
+        self.show_ui()
+        self.current_view = GameEndView(self.root,
+                                        self.ui_logic,
+                                        self.hide_ui,
+                                        self.show_main_view,
+                                        self.show_game_end_view,
+                                        points=points)
         self.current_view.pack()

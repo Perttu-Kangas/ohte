@@ -5,7 +5,8 @@ from services.ui_logic import UILogic
 
 class MainView:
     def __init__(self, root, ui_logic: UILogic, hide_ui, show_main_view,
-                 show_settings_view, show_instructions_view, show_leaderboard_view):
+                 show_settings_view, show_instructions_view,
+                 show_leaderboard_view, show_game_end_view):
         self.root = root
         self.ui_logic = ui_logic
         self.frame = None
@@ -14,6 +15,7 @@ class MainView:
         self.show_settings_view = show_settings_view
         self.show_instructions_view = show_instructions_view
         self.show_leaderboard_view = show_leaderboard_view
+        self.show_game_end_view = show_game_end_view
 
         self.initialize()
 
@@ -62,4 +64,4 @@ class MainView:
         self.hide_ui()
 
         snake_game = SnakeGame(self.ui_logic.player)
-        snake_game.start(self.show_main_view)
+        snake_game.start(self.show_game_end_view)

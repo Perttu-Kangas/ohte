@@ -18,11 +18,11 @@
 |       | 0.5  | Sekvenssikaavio, dokumenttien päivitystä         |
 | 28.4  | 1    | Docstring kirjoitusta luokille                   |
 | 29.4  | 1    | Testien kirjoittelua                             |
+|       | 1    | Pelin päättyessä aloita uusi peli valikko        |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
-|       |      |                                                  |
-|  yht  | 20   |                                                  | 
+|  yht  | 21   |                                                  | 

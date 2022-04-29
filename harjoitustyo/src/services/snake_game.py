@@ -28,7 +28,7 @@ class SnakeGame:
         self.game_repository = game_repository
         self.start_time = None
 
-    def start(self, show_main_view):
+    def start(self, game_end_view):
         self.snake_game_loop = SnakeGameLoop(self, self.player)
 
         self.start_time = time.time()
@@ -37,7 +37,7 @@ class SnakeGame:
             if self.snake_game_loop.tick():
                 pygame.quit()
                 self.save_game()
-                show_main_view()
+                game_end_view(points=self.snake_game_loop.points)
                 break
 
     def save_game(self):
