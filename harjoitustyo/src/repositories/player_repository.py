@@ -88,5 +88,14 @@ class PlayerRepository:
 
         self.connection.commit()
 
+    def delete_data(self):
+        """Poistaa kaikki pelaajat ja asetukset"""
+        cursor = self.connection.cursor()
+
+        cursor.execute("DELETE FROM players")
+        cursor.execute("DELETE FROM player_settings")
+
+        self.connection.commit()
+
 
 player_repository = PlayerRepository(get_database_connection())

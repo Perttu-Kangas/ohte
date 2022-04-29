@@ -54,14 +54,14 @@ class LeaderboardView:
         top_ten_label.grid(
             row=5, column=0, sticky=constants.EW, padx=10, pady=10)
 
-        ten_best = self.ui_logic.get_ten_best()
+        three_best = self.ui_logic.get_three_best()
         for i in range(3):
 
             name = "-"
             points = ""
-            if i < len(ten_best):
-                name = str(ten_best[i][0])
-                points = str(ten_best[i][1])
+            if i < len(three_best):
+                name = str(three_best[i][0])
+                points = str(three_best[i][1])
 
             top_label = ttk.Label(master=self.frame, text=str(
                 i+1) + ". " + name + " " + points)

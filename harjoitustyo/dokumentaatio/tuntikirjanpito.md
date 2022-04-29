@@ -17,6 +17,12 @@
 |       | 0.5  | Pylint, pep                                      |
 |       | 0.5  | Sekvenssikaavio, dokumenttien päivitystä         |
 | 28.4  | 1    | Docstring kirjoitusta luokille                   |
+| 29.4  | 1    | Testien kirjoittelua                             |
 |       |      |                                                  |
 |       |      |                                                  |
-|  yht  | 19   |                                                  | 
+|       |      |                                                  |
+|       |      |                                                  |
+|       |      |                                                  |
+|       |      |                                                  |
+|       |      |                                                  |
+|  yht  | 20   |                                                  | 

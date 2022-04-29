@@ -24,6 +24,16 @@ def create_tables(connection):
     connection.commit()
 
 
+def drop_tables(connection):
+    cursor = connection.cursor()
+
+    cursor.execute("DROP TABLE IF EXISTS games")
+    cursor.execute("DROP TABLE IF EXISTS player_settings")
+    cursor.execute("DROP TABLE IF EXISTS players")
+
+    connection.commit()
+
+
 def initialize_database():
     connection = get_database_connection()
 

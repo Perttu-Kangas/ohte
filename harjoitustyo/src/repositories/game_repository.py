@@ -69,5 +69,15 @@ class GameRepository:
 
         return cursor.fetchall()
 
+    def delete_data(self):
+        """Poistaa kaikki pelaajat, asetukset ja pelit"""
+        cursor = self.connection.cursor()
+
+        cursor.execute("DELETE FROM players")
+        cursor.execute("DELETE FROM player_settings")
+        cursor.execute("DELETE FROM games")
+
+        self.connection.commit()
+
 
 game_repository = GameRepository(get_database_connection())
