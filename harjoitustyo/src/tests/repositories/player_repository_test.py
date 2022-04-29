@@ -7,8 +7,10 @@ from enums.game_enums import Difficulty, Color
 class TestPlayerRepository(unittest.TestCase):
     def setUp(self):
         player_repository.delete_data()
-        self.p1 = Player("p1", 1, Difficulty.MEDIUM, Color.BLACK, Color.BLACK, Color.BLACK)
-        self.p2 = Player("p2", 2, Difficulty.HARD, Color.GREEN, Color.GREEN, Color.GREEN)
+        self.p1 = Player("p1", 1, Difficulty.MEDIUM,
+                         Color.BLACK, Color.BLACK, Color.BLACK)
+        self.p2 = Player("p2", 2, Difficulty.HARD,
+                         Color.GREEN, Color.GREEN, Color.GREEN)
 
     def test_create(self):
         player_repository.create(self.p1)
@@ -17,7 +19,8 @@ class TestPlayerRepository(unittest.TestCase):
         self.assertEqual(created_player.difficulty, self.p1.difficulty)
         self.assertEqual(created_player.apple_color, self.p1.apple_color)
         self.assertEqual(created_player.snake_color, self.p1.snake_color)
-        self.assertEqual(created_player.background_color, self.p1.background_color)
+        self.assertEqual(created_player.background_color,
+                         self.p1.background_color)
 
     def test_find_by_name(self):
         player_repository.create(self.p2)

@@ -9,7 +9,8 @@ class TestGameRepository(unittest.TestCase):
     def setUp(self):
         player_repository.delete_data()
         game_repository.delete_data()
-        self.p1 = Player("p1", 1, Difficulty.MEDIUM, Color.BLACK, Color.BLACK, Color.BLACK)
+        self.p1 = Player("p1", 1, Difficulty.MEDIUM,
+                         Color.BLACK, Color.BLACK, Color.BLACK)
 
     def test_save_game(self):
         game_repository.save_game(self.p1, 10, 20)
@@ -28,9 +29,12 @@ class TestGameRepository(unittest.TestCase):
         self.assertEqual(own_value[2], 60)
 
     def test_three_best(self):
-        p2 = Player("p2", 1, Difficulty.MEDIUM, Color.BLACK, Color.BLACK, Color.BLACK)
-        p3 = Player("p3", 1, Difficulty.MEDIUM, Color.BLACK, Color.BLACK, Color.BLACK)
-        p4 = Player("p4", 1, Difficulty.MEDIUM, Color.BLACK, Color.BLACK, Color.BLACK)
+        p2 = Player("p2", 1, Difficulty.MEDIUM,
+                    Color.BLACK, Color.BLACK, Color.BLACK)
+        p3 = Player("p3", 1, Difficulty.MEDIUM,
+                    Color.BLACK, Color.BLACK, Color.BLACK)
+        p4 = Player("p4", 1, Difficulty.MEDIUM,
+                    Color.BLACK, Color.BLACK, Color.BLACK)
 
         player_repository.create(self.p1)
         player_repository.create(p2)
@@ -49,10 +53,13 @@ class TestGameRepository(unittest.TestCase):
         self.assertEqual(three_best[2][0], self.p1.name)
 
     def test_three_best_difficulty(self):
-        p2 = Player("p2", 1, Difficulty.MEDIUM, Color.BLACK, Color.BLACK, Color.BLACK)
-        p3 = Player("p3", 1, Difficulty.MEDIUM, Color.BLACK, Color.BLACK, Color.BLACK)
+        p2 = Player("p2", 1, Difficulty.MEDIUM,
+                    Color.BLACK, Color.BLACK, Color.BLACK)
+        p3 = Player("p3", 1, Difficulty.MEDIUM,
+                    Color.BLACK, Color.BLACK, Color.BLACK)
 
-        p4 = Player("p4", 1, Difficulty.HARD, Color.BLACK, Color.BLACK, Color.BLACK)
+        p4 = Player("p4", 1, Difficulty.HARD,
+                    Color.BLACK, Color.BLACK, Color.BLACK)
 
         player_repository.create(self.p1)
         player_repository.create(p2)

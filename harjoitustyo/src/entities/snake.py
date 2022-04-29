@@ -32,7 +32,8 @@ class Snake:
         Liikuessa, madon vanhin osa poistuu, ja etupäähän tulee uusi osa.
 
         Args:
-            direction: Direction-olio, joka määrittää madon uuden suunnan. Jos None, niin madon suunta ei muutu
+            direction: Direction-olio, joka määrittää madon uuden suunnan.
+            Jos None, niin madon suunta ei muutu
 
         Returns:
             None

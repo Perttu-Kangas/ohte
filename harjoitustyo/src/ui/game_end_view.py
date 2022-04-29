@@ -25,7 +25,8 @@ class GameEndView:
     def initialize(self):
         self.frame = ttk.Frame(master=self.root)
         info_label = ttk.Label(
-            master=self.frame, text="Peli päättyi " + self.ui_logic.player.name + ", pisteesi "
+            master=self.frame, text="Peli päättyi " +
+            self.ui_logic.player.name + ", pisteesi "
                                     + str(self.points) + "!")
         start_game_button = ttk.Button(
             master=self.frame,
