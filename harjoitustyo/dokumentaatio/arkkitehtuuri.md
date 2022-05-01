@@ -24,7 +24,7 @@ sequenceDiagram
 	PlayerRepository ->> Connection: execute(find sql)
 	Connection -->> PlayerRepository: None
 	PlayerRepository -->> UILogic: None
-	UILogic ->> Player: __init__("test", ...)
+	UILogic ->> Player: Player("test", ...)
 	Player -->> UILogic: Player("test", ...)
 	UILogic ->> PlayerRepository: create(Player)
 	PlayerRepository ->> Connection: execute(insert sql)
