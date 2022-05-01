@@ -12,3 +12,9 @@
   * Asetukset
   * Pelin tulosten tallennus
   * Kirjautuminen
+
+# Viikko 6
+* Koodidokumentaatio kaikelle muulle paitsi SnakeGame + SnakeGameLoop
+* Testit kaikelle muulle paitsi services/ (68%)
+* Käyttöohje ja sovelluslogiikka dokumentaatiota
+* Pelin päättyessä `GameEndView`

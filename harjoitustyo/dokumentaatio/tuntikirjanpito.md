@@ -19,10 +19,10 @@
 | 28.4  | 1    | Docstring kirjoitusta luokille                   |
 | 29.4  | 1    | Testien kirjoittelua                             |
 |       | 1    | Pelin päättyessä aloita uusi peli valikko        |
+|  1.5  | 0.5  | Käyttöohje                                       |
+|       | 0.5  | Sovelluslogiikka + pakkauskaavio docs            |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
 |       |      |                                                  |
-|       |      |                                                  |
-|       |      |                                                  |
-|  yht  | 21   |                                                  | 
+|  yht  | 22   |                                                  | 

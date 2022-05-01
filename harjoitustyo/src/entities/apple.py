@@ -52,4 +52,4 @@ class Apple:
             True, jos omena ja mato ovat samassa kohdassa pelikentällä, muuten False
         """
         return self.snake_game.snake.snake_x == self.apple_x \
-               and self.snake_game.snake.snake_y == self.apple_y
+            and self.snake_game.snake.snake_y == self.apple_y
