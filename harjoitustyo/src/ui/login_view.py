@@ -54,7 +54,7 @@ class LoginView:
     def handle_login(self):
         playername = self.login_entry.get()
         if len(playername) < 4 or len(playername) > 20:
-            self.show_error("Pelaajanimen tulee olla 4-20 merkkiä pitkä!")
+            self.show_error("Nimen tulee olla 4-20 merkkiä!")
             return
 
         self.login(playername)

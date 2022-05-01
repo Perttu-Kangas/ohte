@@ -6,6 +6,8 @@ classDiagram
     UILogic "1" -- "1" LoginView
     UILogic "1" -- "1" SettingsView
     MainView "1" -- "1" SnakeGame
+    SnakeGame "1" -- "1" GameEndView
+    GameEndView "1" -- "1" MainView
     SnakeGame "1" -- "1" SnakeGameLoop
 ```
 

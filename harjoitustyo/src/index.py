@@ -7,6 +7,8 @@ initialize_database()
 
 window = Tk()
 window.title("Matopeli")
+window.resizable(False, False)
+window.geometry("400x300")
 ui = UI(window, UILogic())
 ui.start()
 window.mainloop()
