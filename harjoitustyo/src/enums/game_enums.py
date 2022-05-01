@@ -3,12 +3,14 @@ import pygame
 
 
 class Difficulty(Enum):
+    """Enum, joka vastaa pelivaikeuasteesta"""
     EASY = 10
     MEDIUM = 15
     HARD = 20
 
 
 class Color(Enum):
+    """Enum, jossa on valmiiksi määriteltyjä värejä"""
     BLACK = pygame.Color(0, 0, 0)
     DARK_BLUE = pygame.Color(0, 0, 170)
     DARK_GREEN = pygame.Color(0, 170, 0)
@@ -28,6 +30,7 @@ class Color(Enum):
 
 
 class Direction(Enum):
+    """Enum, jossa on madon suunta. 0 indeksissä on x ja 1 indeksissä y."""
     LEFT = [-10, 0]
     RIGHT = [10, 0]
     UP = [0, -10]
