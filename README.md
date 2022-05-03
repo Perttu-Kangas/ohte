@@ -4,7 +4,7 @@ Sovellusta voi käyttää vain yksi pelaaja kerrallaan.
 
 ## Julkaisu
 
-- [Viikko 5](https://github.com/DeeCaaD/ohte/releases/tag/viikko5)  
+- [Viimeisin](https://github.com/DeeCaaD/ohte/releases/latest/)  
 
 ## Dokumentaatio
 
