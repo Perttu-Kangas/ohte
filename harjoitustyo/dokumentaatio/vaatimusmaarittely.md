@@ -22,8 +22,6 @@ Sovellus koostuu kuudesta eri näkymästä
   * Sisältää itse pelikentän
 
 ## Perusversion tarjoama toiminnallisuus
-
-<br>
   
 * Kirjautuminen
   * Voi kirjautua käyttäjänimellä tai luoda uuden käyttäjän

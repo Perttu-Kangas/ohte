@@ -18,3 +18,7 @@
 * Testit kaikelle muulle paitsi services/ (68%)
 * Käyttöohje ja sovelluslogiikka dokumentaatiota
 * Pelin päättyessä `GameEndView`
+
+# Viikko 7
+* Pitkälti dokumentointia
+* QOL muutoksia peliin

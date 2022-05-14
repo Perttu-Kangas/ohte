@@ -23,6 +23,7 @@
 |       | 0.5  | Sovelluslogiikka + pakkauskaavio docs            |
 | 14.5  | 1    | Testimuutoksia                                   |
 |       | 3    | Koodin dokumentointia                            |
-|       |      |                                                  |
-|       |      |                                                  |
-|  yht  | 26   |                                                  | 
+|       | 2    | Testejä ja QOL muutoksia peliin                  |
+|       | 2    | Dokumentoinnin viimeistelyä                      |
+|       |      |                                                  | 
+|  yht  | 30   |                                                  | 
