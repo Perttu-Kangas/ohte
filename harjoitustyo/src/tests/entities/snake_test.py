@@ -64,9 +64,6 @@ class TestSnake(unittest.TestCase):
         self.snake.move_to(10, self.snake_game.game_y)
         self.assertTrue(self.snake.collides())
 
-
-
-
     def test_collision_body(self):
         self.snake.move(Direction.RIGHT)
         self.snake.grow()

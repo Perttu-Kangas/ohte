@@ -18,10 +18,9 @@ class Apple:
             snake_game: SnakeGame-olio, johon tämä Apple-olio tulee käyttöön
         """
         self.snake_game = snake_game
-        self.apple_x = random.randrange(
-            1, (snake_game.game_x // 10)) * 10
-        self.apple_y = random.randrange(
-            1, (snake_game.game_y // 10)) * 10
+        self.apple_x = 0
+        self.apple_y = 0
+        self.move()
 
     def move(self):
         """Liikuttaa omenaa kentällä uuteen satunnaiseen paikkaan.
@@ -29,8 +28,17 @@ class Apple:
         Returns:
             None
         """
-        self.move_to(random.randrange(1, (self.snake_game.game_x // 10)) * 10,
-                     random.randrange(1, (self.snake_game.game_y // 10)) * 10)
+
+        # Really inefficient way of doing this
+        # Way better solution: keep list of free points in board,
+        # and from them generate new random spot
+        while True:
+            new_x = random.randrange(1, (self.snake_game.game_x // 10)) * 10
+            new_y = random.randrange(1, (self.snake_game.game_y // 10)) * 10
+
+            if self.apple_x != new_x and self.apple_y != new_y:
+                self.move_to(new_x, new_y)
+                break
 
     def move_to(self, to_x, to_y):
         """Liikuttaa omenaa tiettyyn paikkaan kentällä

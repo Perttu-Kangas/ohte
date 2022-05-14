@@ -23,49 +23,44 @@ Sovellus koostuu kuudesta eri näkymästä
 
 ## Perusversion tarjoama toiminnallisuus
 
-#### Tekemättä
-* Viilauksia itse peliin
-* Käyttöliittymmästä hienompi
-
 <br>
   
-* Kirjautuminen | TEHTY
-  * Voi kirjautua käyttäjänimellä tai luoda uuden käyttäjän | TEHTY
-  * Käyttäjänimen täytyy olla vähintään 4 merkkiä ja uniikki | TEHTY
-* Päävalikko | TEHTY
-  * Aloita peli painike | TEHTY
-  * Asetukset painike | TEHTY
-  * Peliohjeet painike | TEHTY
-  * Tulostaulu painike | TEHTY
-* Asetukset | TEHTY
-  * Takaisin päävalikkoon painike | TEHTY
-  * Vaikeusasteen vaihtaminen: HELPPO, NORMAALI, VAIKEA | TEHTY
-    * Vaikeuaste vaikuttaa madon nopeuteen | TEHTY
-  * Madon, omenan ja pelikentän värinvaihto painikkeet | TEHTY
+* Kirjautuminen
+  * Voi kirjautua käyttäjänimellä tai luoda uuden käyttäjän
+  * Käyttäjänimen täytyy olla vähintään 4 merkkiä ja uniikki
+* Päävalikko
+  * Aloita peli painike
+  * Asetukset painike
+  * Peliohjeet painike
+  * Tulostaulu painike
+* Asetukset
+  * Takaisin päävalikkoon painike
+  * Vaikeusasteen vaihtaminen: HELPPO, NORMAALI, VAIKEA
+    * Vaikeuaste vaikuttaa madon nopeuteen
+  * Madon, omenan ja pelikentän värinvaihto painikkeet
 * Peliohjeet
-  * Takaisin päävalikkoon painike | TEHTY
+  * Takaisin päävalikkoon painike
   * Yksinkertaiset ohjeet kuinka peliä pelataan
 * Tulostaulu
-  * Takaisin päävalikkoon painike | TEHTY
-  * Pelaajan parhaat pisteet, kaikenkaikkiaan saadut pisteet sekä peliä pelattu aika | TEHTY
-  * Parhaiden kolmen pelaajan pisteet | TEHTY
+  * Takaisin päävalikkoon painike
+  * Pelaajan parhaat pisteet, kaikenkaikkiaan saadut pisteet sekä peliä pelattu aika
+  * Parhaiden kolmen pelaajan pisteet
 * Peli
-  * Pelikenttä | TEHTY
-    * Mato liikkuu pelikentällä | TEHTY
-    * Peli loppuu madon osuessa reunaan | TEHTY
-  * Mato | TEHTY
-    * Mato liikkuu jatkuvasti | TEHTY
-    * Matoa ohjataan nuolinäppäimillä pelin aikana | TEHTY
-    * Peli loppuu madon osuessa itseensä | TEHTY
-    * Madon koko kasvaa syödessään omenoita | TEHTY
+  * Pelikenttä
+    * Mato liikkuu pelikentällä
+    * Peli loppuu madon osuessa reunaan
+  * Mato
+    * Mato liikkuu jatkuvasti
+    * Matoa ohjataan nuolinäppäimillä pelin aikana
+    * Peli loppuu madon osuessa itseensä
+    * Madon koko kasvaa syödessään omenoit
   * Omena
-    * Pelikentällä on jatkuvasti yksi omena | TEHTY
-    * Madon syödessä omenan, uusi omena luodaan satunnaiseen paikkaan pelikentällä | TEHTY
-    * Pelaaja saa pisteen, kun mato syö omenan | TEHTY
-    * Omenaa ei voida luoda madon päälle
-  * Pelin päättyessä | TEHTY
-    * Pelaajan pisteet sekä pelissä kulunut aika tallennetaan | TEHTY
-    * Pelaaja pystyy aloittamaan uuden pelin tai palaamaan päävalikkoon | TEHTY
+    * Pelikentällä on jatkuvasti yksi omena
+    * Madon syödessä omenan, uusi omena luodaan satunnaiseen paikkaan pelikentällä
+    * Pelaaja saa pisteen, kun mato syö omenan
+  * Pelin päättyessä
+    * Pelaajan pisteet sekä pelissä kulunut aika tallennetaan
+    * Pelaaja pystyy aloittamaan uuden pelin tai palaamaan päävalikkoon
 
 ## Jatkokehitysideoita
 Perusversion jälkeen peliä täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:
