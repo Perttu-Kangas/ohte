@@ -19,6 +19,12 @@ class SnakeGame:
             player: Player,
             game_repository=default_game_repository
     ):
+        """Luo uuden snake game -olion
+
+        Args:
+            player: Player-olio, joka tulee pelaamaan peliä
+            game_repository: Pelitietokantaa vastaava olio
+        """
         self.snake_game_loop = None
         self.game_x = 300
         self.game_y = 300
@@ -29,6 +35,14 @@ class SnakeGame:
         self.start_time = None
 
     def start(self, game_end_view):
+        """Aloittaa peliloopin
+
+        Args:
+            game_end_view: Pelinpäättymisnäkymä, joka näytetään pelin loppuessa
+
+        Returns:
+            None
+        """
         self.snake_game_loop = SnakeGameLoop(self, self.player)
 
         self.start_time = time.time()
@@ -41,6 +55,14 @@ class SnakeGame:
                 break
 
     def save_game(self):
+        """Tallentaa pelatun pelin tulokset ylös
+
+        Returns:
+            None
+        """
+        if not self.game_repository:
+            return
+
         duration = int(time.time() - self.start_time)
         self.game_repository.save_game(
             self.player, self.snake_game_loop.points, duration)
@@ -49,6 +71,12 @@ class SnakeGame:
 class SnakeGameLoop:
 
     def __init__(self, snake_game: SnakeGame, player: Player):
+        """Luo uuden peliloopin
+
+        Args:
+            snake_game: Objekti, joka sisältää pelin asetuksia
+            player: Player-olio, joka pelaa peliä
+        """
         self.player = player
         pygame.init()
         pygame.display.set_caption("Pisteet: 0")
@@ -59,6 +87,14 @@ class SnakeGameLoop:
         self.points = 0
 
     def tick(self):
+        """Kutsutaan aina, kun pelin pitäisi päivittyä.
+        Hoitaa näppäinpainalluksien kuuntelemisen, pisteiden laskemisen,
+        törmäyksien tarkistamisen, piirtämisen ja kaiken,
+        mitä pelissä tapahtuukaan.
+
+        Returns:
+            False, jos pelin pitäisi päättyä
+        """
         if not self.handle_events():
             return False
         if self.game.snake.collides():
@@ -70,10 +106,25 @@ class SnakeGameLoop:
             pygame.display.set_caption("Pisteet: " + str(self.points))
         self.draw()
         pygame.display.update()
-        self.clock.tick(self.player.difficulty.value)
+        self.fps()
         return True
 
+    def fps(self):
+        """Ajastaa ruudunpäivitykset, joiden avulla
+        määritellään pelin vaikeusastekkin.
+
+        Returns:
+            None
+        """
+        self.clock.tick(self.player.difficulty.value)
+
     def draw(self):
+        """Piirtää pelikentän.
+        Täyttää värillä sekä piirtää madon ja omenan
+
+        Returns:
+            None
+        """
         self.display.fill(self.player.background_color.value)
         for body_part in self.game.snake.body:
             pygame.draw.rect(self.display,
@@ -84,6 +135,12 @@ class SnakeGameLoop:
                          pygame.Rect(self.game.apple.apple_x, self.game.apple.apple_y, 10, 10))
 
     def handle_events(self):
+        """Kuuntelee näppäinpainalluksia,
+        sekä liikuttaa matoa niiden mukaan
+
+        Returns:
+            False, jos pelin pitäisi päättyä
+        """
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
