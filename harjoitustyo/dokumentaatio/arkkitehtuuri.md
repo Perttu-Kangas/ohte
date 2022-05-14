@@ -1,4 +1,5 @@
 ## Luokkakaavio
+Kuvaa projektin luokkien yhteyksiä
 ```mermaid
 classDiagram
     UILogic "1" -- "1" LeaderboardView
@@ -49,6 +50,7 @@ nykyinen `Player` -olio.
 kummankin käyttöoikeutta. `SnakeGame` pääsee käsiksi `GameRepository`, jotta se pystyy tallentamaan pelejä tietokantaan.
 
 ## Pakkauskaavio
+Kuvaa mihin projektin eri tiedostot on sijoiteltu
 ```mermaid
 classDiagram
     UI "1" -- "1" services

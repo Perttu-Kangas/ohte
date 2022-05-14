@@ -15,29 +15,57 @@ class TestSnake(unittest.TestCase):
         self.assertEqual(self.snake.snake_x, 150)
         self.assertEqual(self.snake.snake_y, 150)
 
-    def test_move(self):
+    def test_move_none(self):
+        self.snake.move(None)
+        self.assertEqual(self.snake.snake_x, 160)
+        self.assertEqual(self.snake.snake_y, 150)
+
+    def test_move_right(self):
         self.snake.move(Direction.RIGHT)
         self.assertEqual(self.snake.snake_x, 160)
-        self.snake.move(Direction.DOWN)
-        self.assertEqual(self.snake.snake_y, 160)
-        self.snake.move(Direction.LEFT)
-        self.assertEqual(self.snake.snake_x, 150)
-        self.snake.move(Direction.UP)
         self.assertEqual(self.snake.snake_y, 150)
-        self.snake.move(None)
+
+    def test_move_down(self):
+        self.snake.move(Direction.DOWN)
+        self.assertEqual(self.snake.snake_x, 150)
+        self.assertEqual(self.snake.snake_y, 160)
+
+    def test_move_left(self):
+        self.snake.move(Direction.LEFT)
+        self.assertEqual(self.snake.snake_x, 140)
+        self.assertEqual(self.snake.snake_y, 150)
+
+    def test_move_up(self):
+        self.snake.move(Direction.UP)
+        self.assertEqual(self.snake.snake_x, 150)
         self.assertEqual(self.snake.snake_y, 140)
 
     def test_grow(self):
         self.snake.grow()
         self.assertEqual(len(self.snake.body), 2)
 
-    def test_collision_border(self):
-        self.snake.move_to(-10, 0)
-        self.assertTrue(self.snake.collides())
-        self.snake.move_to(10, self.snake_game.game_y + 10)
-        self.assertTrue(self.snake.collides())
+    def test_collision_no_false_positive(self):
         self.snake.move_to(10, 50)
         self.assertTrue(not self.snake.collides())
+
+    def test_collision_left(self):
+        self.snake.move_to(-10, 10)
+        self.assertTrue(self.snake.collides())
+
+    def test_collision_top(self):
+        self.snake.move_to(10, -10)
+        self.assertTrue(self.snake.collides())
+
+    def test_collision_right(self):
+        self.snake.move_to(self.snake_game.game_x, 10)
+        self.assertTrue(self.snake.collides())
+
+    def test_collision_bottom(self):
+        self.snake.move_to(10, self.snake_game.game_y)
+        self.assertTrue(self.snake.collides())
+
+
+
 
     def test_collision_body(self):
         self.snake.move(Direction.RIGHT)
