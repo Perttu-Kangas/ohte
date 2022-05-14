@@ -21,8 +21,8 @@
 |       | 1    | Pelin päättyessä aloita uusi peli valikko        |
 |  1.5  | 0.5  | Käyttöohje                                       |
 |       | 0.5  | Sovelluslogiikka + pakkauskaavio docs            |
+| 14.5  | 1    | Testimuutoksia                                   |
+|       | 3    | Koodin dokumentointia                            |
 |       |      |                                                  |
 |       |      |                                                  |
-|       |      |                                                  |
-|       |      |                                                  |
-|  yht  | 22   |                                                  | 
+|  yht  | 26   |                                                  | 

@@ -30,6 +30,7 @@ class Snake:
     def move(self, direction):
         """Liikuttaa matoa annettuun suuntaan.
         Liikuessa, madon vanhin osa poistuu, ja etupäähän tulee uusi osa.
+        Mato ei voi liikkua vastakkaiseen suuntaan kuin äsken.
 
         Args:
             direction: Direction-olio, joka määrittää madon uuden suunnan.
@@ -40,6 +41,10 @@ class Snake:
         """
         if not direction:
             direction = self.direction
+
+        if self.direction == direction.opposite(direction):
+            direction = self.direction
+
         self.direction = direction
         self.move_to(self.snake_x +
                      direction.value[0], self.snake_y + direction.value[1])

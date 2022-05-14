@@ -35,3 +35,13 @@ class Direction(Enum):
     RIGHT = [10, 0]
     UP = [0, -10]
     DOWN = [0, 10]
+
+    def opposite(self, direction):
+        if direction == Direction.UP:
+            return self.DOWN
+        elif direction == Direction.DOWN:
+            return self.UP
+        elif direction == Direction.RIGHT:
+            return self.LEFT
+        else:
+            return self.RIGHT

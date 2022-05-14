@@ -34,7 +34,7 @@ class SnakeGame:
         self.start_time = time.time()
 
         while True:
-            if self.snake_game_loop.tick():
+            if not self.snake_game_loop.tick():
                 pygame.quit()
                 self.save_game()
                 game_end_view(points=self.snake_game_loop.points)
@@ -60,9 +60,9 @@ class SnakeGameLoop:
 
     def tick(self):
         if not self.handle_events():
-            return True
+            return False
         if self.game.snake.collides():
-            return True
+            return False
         if self.game.apple.collides():
             self.game.snake.grow()
             self.game.apple.move()
@@ -71,7 +71,7 @@ class SnakeGameLoop:
         self.draw()
         pygame.display.update()
         self.clock.tick(self.player.difficulty.value)
-        return False
+        return True
 
     def draw(self):
         self.display.fill(self.player.background_color.value)

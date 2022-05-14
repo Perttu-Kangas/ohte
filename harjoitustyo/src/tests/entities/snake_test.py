@@ -31,14 +31,21 @@ class TestSnake(unittest.TestCase):
         self.assertEqual(self.snake.snake_y, 160)
 
     def test_move_left(self):
+        self.snake.move(Direction.UP)
         self.snake.move(Direction.LEFT)
         self.assertEqual(self.snake.snake_x, 140)
-        self.assertEqual(self.snake.snake_y, 150)
+        self.assertEqual(self.snake.snake_y, 140)
 
     def test_move_up(self):
         self.snake.move(Direction.UP)
         self.assertEqual(self.snake.snake_x, 150)
         self.assertEqual(self.snake.snake_y, 140)
+
+    def test_move_opposite(self):
+        self.snake.move(Direction.LEFT)
+        # It should keep going right
+        self.assertEqual(self.snake.snake_x, 160)
+        self.assertEqual(self.snake.snake_y, 150)
 
     def test_grow(self):
         self.snake.grow()
