@@ -5,6 +5,15 @@ from services.ui_logic import UILogic
 
 class GameEndView:
     def __init__(self, root, ui_logic: UILogic, hide_ui, show_main_view, show_game_end_view, points=0):
+        """Luokan konstruktori. Luo uuden ohjenäkymän.
+
+        Args:
+            root: Käyttöliittymästä vastaava tkinter.Tk objekti
+            ui_logic: Käyttöliittymälogiikasta vastaava luokka
+            show_main_view: Päävalikkonäkymän avaus metodi
+            show_game_end_view: Lopetusnäkymän avaus metodi
+            points: Saavutetut pisteet pelissä
+        """
         self.root = root
         self.ui_logic = ui_logic
         self.frame = None
@@ -17,12 +26,15 @@ class GameEndView:
         self.initialize()
 
     def pack(self):
+        """Avaa näkymän"""
         self.frame.pack()
 
     def destroy(self):
+        """Tuhoaa näkymän"""
         self.frame.destroy()
 
     def initialize(self):
+        """Alustaa näkymän"""
         self.frame = ttk.Frame(master=self.root)
         info_label = ttk.Label(
             master=self.frame, text="Peli päättyi " +
@@ -46,6 +58,7 @@ class GameEndView:
                          padx=10, pady=10)
 
     def handle_start_game(self):
+        """Piilottaa käyttöliittymän, ja avaa pelin."""
         self.hide_ui()
 
         snake_game = SnakeGame(self.ui_logic.player)

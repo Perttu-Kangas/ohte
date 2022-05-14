@@ -9,32 +9,67 @@ from services.ui_logic import UILogic
 
 
 class UI:
+    """Sovelluksen käyttöliittymästä vastaava luokka"""
 
     def __init__(self, root: Tk, ui_logic: UILogic):
+        """Luokan konstruktori. Luo uuden käyttöliittymästä vastaavan palvelun.
+
+        Args:
+            root: Käyttöliittymästä vastaava tkinter.Tk objekti
+            ui_logic: Käyttöliittymälogiikasta vastaava luokka
+        """
         self.root = root
         self.current_view = None
         self.hidden = False
         self.ui_logic = ui_logic
 
     def start(self):
+        """Kutsutaan, kun sovellus käynnistyy.
+        Avaa ensiki kirjautumisvalikon.
+
+        Returns:
+            None
+        """
         self.show_login_view()
 
     def hide_current_view(self):
+        """Tuhoaa tämän hetkisen ikkunan
+
+        Returns:
+            None
+        """
         if self.current_view:
             self.current_view.destroy()
         self.current_view = None
 
     def show_ui(self):
+        """Tuo käyttöliittymän takaisin esiin.
+        Esimerkiksi, kun peli loppuu.
+
+        Returns:
+            None
+        """
         if self.hidden:
             self.root.deiconify()
             self.hidden = False
 
     def hide_ui(self):
+        """Piilottaa käyttöliittymän.
+        Esimerkiksi, kun peli alkaa.
+
+        Returns:
+            None
+        """
         if not self.hidden:
             self.root.withdraw()
             self.hidden = True
 
     def show_login_view(self):
+        """Tuhoaa nykyisen näkymän, ja avaa kirjautumisnäkymän
+
+        Returns:
+            None
+        """
         self.hide_current_view()
         self.show_ui()
         self.current_view = LoginView(
@@ -42,6 +77,11 @@ class UI:
         self.current_view.pack()
 
     def show_main_view(self):
+        """Tuhoaa nykyisen näkymän, ja avaa päänäkymän
+
+        Returns:
+            None
+        """
         self.hide_current_view()
         self.show_ui()
         self.current_view = MainView(self.root,
@@ -55,6 +95,11 @@ class UI:
         self.current_view.pack()
 
     def show_settings_view(self):
+        """Tuhoaa nykyisen näkymän, ja avaa asetuksetnäkymän
+
+        Returns:
+            None
+        """
         self.hide_current_view()
         self.show_ui()
         self.current_view = SettingsView(
@@ -62,6 +107,11 @@ class UI:
         self.current_view.pack()
 
     def show_leaderboard_view(self):
+        """Tuhoaa nykyisen näkymän, ja avaa tulostaulunäkymän
+
+        Returns:
+            None
+        """
         self.hide_current_view()
         self.show_ui()
         self.current_view = LeaderboardView(
@@ -69,12 +119,22 @@ class UI:
         self.current_view.pack()
 
     def show_instructions_view(self):
+        """Tuhoaa nykyisen näkymän, ja avaa ohjenäkymän
+
+        Returns:
+            None
+        """
         self.hide_current_view()
         self.show_ui()
         self.current_view = InstructionsView(self.root, self.show_main_view)
         self.current_view.pack()
 
     def show_game_end_view(self, points=0):
+        """Tuhoaa nykyisen näkymän, ja avaa pelinpäättymisnäkymän
+
+        Returns:
+            None
+        """
         self.hide_current_view()
         self.show_ui()
         self.current_view = GameEndView(self.root,

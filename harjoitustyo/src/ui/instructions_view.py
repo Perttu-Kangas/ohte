@@ -3,6 +3,13 @@ from tkinter import ttk, constants
 
 class InstructionsView:
     def __init__(self, root, show_main_view):
+        """Luokan konstruktori. Luo uuden ohjenäkymän.
+
+        Args:
+            root: Käyttöliittymästä vastaava tkinter.Tk objekti
+            ui_logic: Käyttöliittymälogiikasta vastaava luokka
+            show_main_view: Päävalikkonäkymän avaus metodi
+        """
         self.root = root
         self.frame = None
         self.show_main_view = show_main_view
@@ -10,12 +17,15 @@ class InstructionsView:
         self.initialize()
 
     def pack(self):
+        """Avaa näkymän"""
         self.frame.pack()
 
     def destroy(self):
+        """Tuhoaa näkymän"""
         self.frame.destroy()
 
     def initialize(self):
+        """Alustaa näkymän"""
         self.frame = ttk.Frame(master=self.root)
 
         back_button = ttk.Button(

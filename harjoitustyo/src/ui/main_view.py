@@ -7,6 +7,18 @@ class MainView:
     def __init__(self, root, ui_logic: UILogic, hide_ui, show_main_view,
                  show_settings_view, show_instructions_view,
                  show_leaderboard_view, show_game_end_view):
+        """Luokan konstruktori. Luo uuden päänäkymän.
+
+        Args:
+            root: Käyttöliittymästä vastaava tkinter.Tk objekti
+            ui_logic: Käyttöliittymälogiikasta vastaava luokka
+            hide_ui: Metodi, jolla piilottaa koko näkymä
+            show_main_view: Metodi, joka avaa päänäkymän
+            show_settings_view: Metodi, joka avaa asetusketnäkymän
+            show_instructions_view: Metodi, joka avaa ohjeetnäkymän
+            show_leaderboard_view: Metodi, joka avaa tulostaulunäkymän
+            show_game_end_view: Metodi, joka avaa pelinpäättymisnäkymän
+        """
         self.root = root
         self.ui_logic = ui_logic
         self.frame = None
@@ -20,12 +32,15 @@ class MainView:
         self.initialize()
 
     def pack(self):
+        """Avaa näkymän"""
         self.frame.pack()
 
     def destroy(self):
+        """Tuhoaa näkymän"""
         self.frame.destroy()
 
     def initialize(self):
+        """Alustaa näkymän"""
         self.frame = ttk.Frame(master=self.root)
         info_label = ttk.Label(
             master=self.frame, text="Tervetuloa " + self.ui_logic.player.name + "!")
@@ -61,6 +76,11 @@ class MainView:
             row=4, column=0, sticky=constants.EW, padx=10, pady=10)
 
     def handle_start_game(self):
+        """Piilottaa käyttöliittymän, ja avaa pelin.
+
+        Returns:
+            None
+        """
         self.hide_ui()
 
         snake_game = SnakeGame(self.ui_logic.player)

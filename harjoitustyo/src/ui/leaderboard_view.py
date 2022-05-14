@@ -4,6 +4,13 @@ from services.ui_logic import UILogic
 
 class LeaderboardView:
     def __init__(self, root, ui_logic: UILogic, show_main_view):
+        """Luokan konstruktori. Luo uuden tulostaulunäkymän.
+
+        Args:
+            root: Käyttöliittymästä vastaava tkinter.Tk objekti
+            ui_logic: Käyttöliittymälogiikasta vastaava luokka
+            show_main_view: Päävalikkonäkymän avaus metodi
+        """
         self.root = root
         self.ui_logic = ui_logic
         self.frame = None
@@ -12,12 +19,15 @@ class LeaderboardView:
         self.initialize()
 
     def pack(self):
+        """Avaa näkymän"""
         self.frame.pack()
 
     def destroy(self):
+        """Tuhoaa näkymän"""
         self.frame.destroy()
 
     def initialize(self):
+        """Alustaa näkymän"""
         self.frame = ttk.Frame(master=self.root)
         back_button = ttk.Button(
             master=self.frame,
@@ -27,6 +37,15 @@ class LeaderboardView:
 
         info_label = ttk.Label(master=self.frame, text="Tulostaulu")
 
+        back_button.grid(row=0, column=0, sticky=constants.EW,
+                         padx=10, pady=10)
+        info_label.grid(row=1, column=0, sticky=constants.EW, padx=10, pady=10)
+
+        self.own_best_init()
+        self.three_best_init()
+
+    def own_best_init(self):
+        """Alustaa omat parhaat tulokset näkymään"""
         player_own = self.ui_logic.get_own_best()
         player_best = "0" if player_own[0] is None else str(player_own[0])
         player_all = "0" if player_own[1] is None else str(player_own[1])
@@ -39,19 +58,18 @@ class LeaderboardView:
         own_time_label = ttk.Label(
             master=self.frame, text="Peliaika: " + player_time)
 
-        top_ten_label = ttk.Label(master=self.frame,
-                                  text="Parhaat 3 vaikeusasteella " + self.ui_logic.player.difficulty.name)
-
-        back_button.grid(row=0, column=0, sticky=constants.EW,
-                         padx=10, pady=10)
-        info_label.grid(row=1, column=0, sticky=constants.EW, padx=10, pady=10)
         own_best_label.grid(
             row=2, column=0, sticky=constants.EW, padx=10)
         own_total_label.grid(
             row=3, column=0, sticky=constants.EW, padx=10)
         own_time_label.grid(
             row=4, column=0, sticky=constants.EW, padx=10)
-        top_ten_label.grid(
+
+    def three_best_init(self):
+        """Alustaa kolme parasta näkymään"""
+        top_three_label = ttk.Label(master=self.frame,
+                                    text="Parhaat 3 vaikeusasteella " + self.ui_logic.player.difficulty.name)
+        top_three_label.grid(
             row=5, column=0, sticky=constants.EW, padx=10, pady=10)
 
         three_best = self.ui_logic.get_three_best()
