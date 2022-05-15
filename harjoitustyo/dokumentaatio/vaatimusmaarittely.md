@@ -7,7 +7,7 @@ Matoa kasvatetaan syömällä pelikentältä löytyviä omenoita,
 ja pelin voi voittaa kasvattamalla madon koko pelikentän kokoiseksi
 
 ## Käyttöliittymäluonnos
-Sovellus koostuu kuudesta eri näkymästä
+Sovellus koostuu seitsemästä eri näkymästä
 * 1 Kirjautuminen
   * Sovellus avautuu ensiksi tänne. Sisältää nimikentän sekä kirjautusmisnapin
 * 2 Päävalikko
@@ -17,9 +17,11 @@ Sovellus koostuu kuudesta eri näkymästä
   * 4 Peliohjeet
     * Sisältää peliohjeet sekä painikkeen takaisin päävalikkoon
   * 5 Tulostaulu
-    * Sisältää parhaat kymmenen tulosta sekä painikkeen takaisin päävalikkoon
+    * Sisältää parhaat kolme tulosta, omat parhaat tulokset sekä painikkeen takaisin päävalikkoon
 * 6 Pelikenttä
   * Sisältää itse pelikentän
+  * 7 Pelin loppuminen
+    * Sisältää aloita uusi peli sekä painikkeen takaisin päävalikkoon
 
 ## Perusversion tarjoama toiminnallisuus
   
